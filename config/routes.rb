@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  # Mount all the registered PushType Rails Engines. This should be placed
+  # at the end of your routes.rb file to ensure your application routes are
+  # not overidden by PushType.
+  #
+  # Overide the default mount points by passing a hash of options.
+  # Example:
+  #
+  #   mount_push_type admin: 'cms', front_end: 'blog'
+  #
+  mount_push_type
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
